@@ -1,0 +1,64 @@
+Status: FAILED
+Time Taken: 813
+Size: 457
+Timestamp: Fri Mar 11 16:32:32 IST 2022
+TestStep: create C
+
+----------------- Messages ------------------------------
+[Not SOAP Fault] Response is a SOAP Fault
+
+----------------- Properties ------------------------------
+Endpoint: http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+Request Headers: Authorization : bearer f0rf13pxtxp7mftwc23rq6e52yvmi5um
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Host : soap.upskills.in
+Accept-Encoding : gzip,deflate
+Content-Length : 492
+Content-Type : application/soap+xml;charset=UTF-8;action="customerCustomerRepositoryV1Save"
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1SaveRequest>
+         <customer>
+            <email>ss@gmail.com</email>
+            <firstname>rfShesha</firstname>
+            <lastname>welcome</lastname>
+         </customer>
+      </def:customerCustomerRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>
+
+---------------- Response --------------------------
+Response Headers: Keep-Alive : timeout=5, max=100
+date : Fri, 11 Mar 2022 11:02:33 GMT
+content-length : 457
+server : LiteSpeed
+expires : Thu, 19 Nov 1981 08:52:00 GMT
+x-ua-compatible : IE=edge
+Connection : Keep-Alive
+pragma : no-cache
+set-cookie : PHPSESSID=57dd9616773edfdd69438b5c0e1be747; expires=Fri, 11-Mar-2022 12:02:33 GMT; Max-Age=3600; path=/; domain=soap.upskills.in; HttpOnly
+x-powered-by : PHP/7.2.34
+content-type : application/soap+xml; charset=UTF-8
+#status# : HTTP/1.1 200 OK
+cache-control : no-store, no-cache, must-revalidate
+
+
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Body>
+      <env:Fault>
+         <env:Code>
+            <env:Value>env:Sender</env:Value>
+         </env:Code>
+         <env:Reason>
+            <env:Text xml:lang="en">A customer with the same email address already exists in an associated website.</env:Text>
+         </env:Reason>
+      </env:Fault>
+   </env:Body>
+</env:Envelope>
